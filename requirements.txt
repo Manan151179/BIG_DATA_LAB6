@@ -1,10 +1,25 @@
-pandas==3.0.1
-numpy==2.0.0
+# --- Core Data & Machine Learning ---
+pandas==2.3.3
+numpy==2.4.2
+scikit-learn==1.8.0
+
+# --- Document Processing & OCR ---
+pymupdf==1.27.1
+pytesseract==0.3.13
+
+# --- Retrieval & Vector DBs ---
 transformers==5.2.0
-datasets==3.0.0
+datasets==4.6.0
 sentence-transformers==5.2.3
-faiss-cpu==1.9.0
+faiss-cpu==1.13.2
 chromadb==1.5.1
-scikit-learn==1.5.0
 rank-bm25==0.2.2
-pymupdf==1.24.0
+
+# --- Cloud Database & Generative AI ---
+snowflake-connector-python[pandas]==3.12.3
+google-genai==1.65.0
+streamlit==1.54.0
+
+# --- Utilities ---
+tqdm==4.67.3
+python-dotenv==1.2.1

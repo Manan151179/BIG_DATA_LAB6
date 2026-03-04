@@ -1,0 +1,7 @@
+query_id,question,precision_at_5,recall_at_10,must_kws_found,opt_kws_in_answer,gemini_answer,num_text_hits,num_image_hits
+Q1,"Under the Co-Branding Agreement, what is the exact formula used to calculate the advertising fees i-Escrow must pay 2TheMart?",0.2,1.0,"['0.025%', 'average transaction']",['advertising fee'],"After the Launch Date, i-Escrow shall pay 2TheMart advertising fees based on the number of Transaction Inquiries. This advertising fees shall consist of a per Transaction Inquiry amount calculated by multiplying 0.025% by the amount of the average Transaction from all Customers in the preceding quarter.",20,0
+Q2,What are the specific conditions and timeline under which Adams Golf can terminate the endorsement agreement with Tom Watson for cause?,0.6,0.667,"['material breach', 'written notice']",['cause'],"Adams Golf can terminate the endorsement agreement with Tom Watson for cause under the following specific conditions and timelines:
+
+1.  **Material Breach (Paragraph 23):**
+    *   **",20,0
+Q3,"According to the Adams Golf Endorsement Agreement, what specific brand of putter is Tom Watson contractually required to use during the US Open?",0.2,0.333,['other manufacturer'],"['putter', 'US Open']","According to the Adams Golf Endorsement Agreement, CONSULTANT (Tom Watson) may play a putter by a manufacturer other than ADAMS GOLF. The agreement does not specify a particular brand of putter he is contractually required to use during the US Open.",20,0

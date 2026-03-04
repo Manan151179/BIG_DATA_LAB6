@@ -1,0 +1,6 @@
+timestamp,query_id,retrieval_mode,top_k,latency_ms,Precision@5,Recall@10,evidence_ids_returned,gold_evidence_ids,faithfulness_pass,missing_evidence_behavior
+2026-02-27T14:00:57-0600,Q1,hybrid,20,3117,,,"[""doc1_chunk1"", ""doc2_chunk4"", ""doc3_chunk2""]",,,
+2026-02-27T15:58:37-0600,Q2,hybrid,20,2286,,,[],,,
+2026-02-27T16:00:32-0600,Q2,hybrid,20,2037,,,[],,,
+2026-02-27T16:02:55-0600,,hybrid,20,1878,,,[],,,
+2026-02-27T16:05:32-0600,,hybrid,20,8373,,,"[""7446afdf-24d2-4da9-a974-12e90eef6d9a"", ""7dcc47f7-365d-4ee5-84c6-3865227d6b92"", ""252dd428-f197-4f7d-a773-7e7676a72714"", ""d0fcc4d7-9d66-494d-ba57-d6a136b8caeb"", ""5f034f81-59d5-4a2e-aa87-85e98d15f66f"", ""935aa298-1b18-4de0-a6fa-0ae17bb6c13b"", ""de8b5403-5f32-415c-986f-e0486719a5b2"", ""4ac11308-c6e1-40f3-b9a7-6821b815d2c4"", ""2243223c-1fdc-4120-a9c0-192e575f507b"", ""05eb36fc-eb83-43c4-a7d3-db33b0b5ac80"", ""6db62cad-1aed-4462-a0cc-4b1aa353eaa1"", ""8b4502b6-d370-4ba8-8435-40fd2dd9f8c7"", ""7130a5c3-b474-42c6-a5f3-7b8c38a89018"", ""a744c179-eb72-436f-a534-42c01805ec14"", ""9135ab48-1794-47dc-b48a-838b47427816""]",,,

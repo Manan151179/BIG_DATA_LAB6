@@ -1,0 +1,10 @@
+query_id,question,precision_at_5,recall_at_10,must_kws_found,opt_kws_in_answer,groq_answer,num_text_hits,num_image_hits
+Q1,"Under the Co-Branding Agreement, what is the exact formula used to calculate the advertising fees i-Escrow must pay 2TheMart?",0.2,1.0,"['0.025%', 'average transaction']",[],Not found in context.,20,0
+Q2,What are the specific conditions and timeline under which Adams Golf can terminate the endorsement agreement with Tom Watson for cause?,0.6,0.667,"['material breach', 'written notice']","['termination', 'cause']","According to the context, Adams Golf can terminate the endorsement agreement with Tom Watson for cause if Tom Watson commits a material breach of the agreement. The specific conditions and timeline are as follows:
+
+1. Adams Golf must give Tom Watson 15 days' written notice of the breach.
+2. The breach must not be rectified by Tom Watson within the 15-day period.
+3. Upon termination, Tom Watson must repay Adams Golf for the period of the agreement not performed, calculated in the same way as repayment under paragraph 8A.
+
+This is stated in paragraph 23 (TERMINATION FOR CAUSE) of the agreement.",20,0
+Q3,"According to the Adams Golf Endorsement Agreement, what specific brand of putter is Tom Watson contractually required to use during the US Open?",0.2,0.333,['other manufacturer'],[],Not found in context.,20,0
