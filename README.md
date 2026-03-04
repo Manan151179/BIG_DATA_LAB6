@@ -1,7 +1,7 @@
 # ⚖️ LexGuard: Neuro-Symbolic Compliance Auditor
 **Phase 6: Agentic System Integration**
 
-[![Demo Video](https://img.shields.io/badge/Watch-Demo_Video-red?style=for-the-badge&logo=youtube)](YOUR_YOUTUBE_OR_DRIVE_LINK_HERE)
+[![Demo Video] - https://youtu.be/76Jq8XyKvWY
 
 ## 📖 Project Overview
 LexGuard is an AI-powered compliance auditor designed to analyze coontracts and Lease Agreements. By utilizing a "Recall-Then-Reason" pipeline, LexGuard decouples document retrieval from logical reasoning. 
