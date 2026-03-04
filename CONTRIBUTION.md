@@ -1,6 +1,6 @@
 # Individual Contribution Report
-**Name:** [Your Name]
-**Role:** [e.g., Lead Agent Architect / Database Engineer]
+**Name:** Manan Koradiya
+**Role:** Agent Architect
 
 **Personal Responsibilities & Implemented Components:**
 * Engineered the `tools.py` file, wrapping Snowflake SQL queries and Python risk-assessment logic into LLM-callable functions.
