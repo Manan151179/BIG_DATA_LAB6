@@ -4,7 +4,7 @@
 [![Demo Video](https://img.shields.io/badge/Watch-Demo_Video-red?style=for-the-badge&logo=youtube)](YOUR_YOUTUBE_OR_DRIVE_LINK_HERE)
 
 ## 📖 Project Overview
-LexGuard is an AI-powered compliance auditor designed to analyze Residential Lease Agreements. By utilizing a "Recall-Then-Reason" pipeline, LexGuard decouples document retrieval from logical reasoning. 
+LexGuard is an AI-powered compliance auditor designed to analyze coontracts and Lease Agreements. By utilizing a "Recall-Then-Reason" pipeline, LexGuard decouples document retrieval from logical reasoning. 
 
 For this milestone, LexGuard has been upgraded with an autonomous Agent layer powered by **Gemini 2.5 Flash**. The agent can interpret user queries, iteratively select the appropriate Python tools, fetch raw contract clauses directly from a Snowflake data warehouse, and synthesize a final compliance verdict (e.g., identifying high-risk indemnification clauses).
 
