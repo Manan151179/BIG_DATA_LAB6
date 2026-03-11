@@ -2,6 +2,9 @@ import os
 import streamlit as st
 import snowflake.connector
 
+import config  # noqa: F401 — seeds randomness on import
+from local_store import LocalStore
+
 # Removed externalbrowser to use standard password auth that worked for ingest.py
 
 @st.cache_resource
@@ -84,3 +87,36 @@ def calculate_risk_level(clause_text: str) -> str:
         return "Medium Risk: Mentions penalties or breach conditions."
     else:
         return "Low Risk: No standard high-risk keywords detected."
+
+
+def retrieve_local_clauses(search_term: str, top_k: int = 5) -> str:
+    """
+    Searches the local separated JSON stores for contract clauses by keyword.
+    This is the offline/local alternative to retrieve_contract_clauses(), inspired
+    by HyperGraphRAG's separated entity_vdb + hyperedge_vdb retrieval pattern.
+
+    Args:
+        search_term: A keyword or phrase to search the clause index for.
+        top_k: Maximum number of results to return.
+
+    Returns:
+        A string containing the matched contract chunks, or a not-found message.
+    """
+    print(f"🔧 Tool Invoked: Searching local store for '{search_term}'...")
+
+    try:
+        store = LocalStore(working_dir=config.HYPERPARAMS["working_dir"])
+        results = store.search_clauses(search_term, top_k=top_k)
+
+        if not results:
+            return f"No evidence found in the local store for '{search_term}'."
+
+        evidence = []
+        for r in results:
+            evidence.append(f"[Source: {r['doc_name']}]\n{r['text']}")
+
+        return "\n\n---\n\n".join(evidence)
+
+    except Exception as e:
+        print(f"\n❌ LOCAL STORE ERROR: {str(e)}\n")
+        return f"Local store error: {str(e)}"

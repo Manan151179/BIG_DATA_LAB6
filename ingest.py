@@ -21,6 +21,9 @@ import pandas as pd
 from tqdm import tqdm
 from dotenv import load_dotenv
 
+import config  # Seeds all randomness on import
+from local_store import LocalStore
+
 import snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
 
@@ -141,7 +144,7 @@ def extract_chunks(pdf_paths: list[str]) -> list[dict]:
 
             chunks.append(
                 {
-                    "CHUNK_ID": str(uuid.uuid4()),
+                    "CHUNK_ID": config.get_seeded_uuid(),
                     "DOC_NAME": doc_name,
                     "CHUNK_TEXT": text,
                     "METADATA": json.dumps(metadata),
@@ -297,7 +300,12 @@ def main() -> None:
         print("⚠  No chunks produced — nothing to upload. Exiting.")
         return
 
-    # 3. Build DataFrame
+    # 3. Persist to separated local store (inspired by HyperGraphRAG)
+    store = LocalStore(working_dir=config.HYPERPARAMS["working_dir"])
+    store.ingest(chunks)
+    print(f"\n💾 Local store saved to '{config.HYPERPARAMS['working_dir']}'")
+
+    # 4. Build DataFrame
     df = build_dataframe(chunks)
     print(f"\n📊 DataFrame shape: {df.shape}")
     print(df.head(3).to_string(index=False, max_colwidth=60))
